@@ -1,0 +1,13 @@
+langchain
+langchain-google-genai
+langchain-community
+chromadb
+sentence-transformers
+sqlparse
+crewai
+pydantic
+spacy
+python-dotenv
+google-generativeai
+# grab the small spaCy model automatically:
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz

@@ -7,22 +7,36 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## 🎯 Overview
+##  Overview
 
 CrewToSQL is an innovative multi-agent text-to-SQL system that leverages Retrieval-Augmented Generation (RAG) and auto-repair capabilities to transform natural language queries into accurate SQL statements. The system achieves **89.7% execution accuracy**, representing a **34.6 percentage point improvement** over baseline systems.
 
 ### Key Features
 
-- **🤖 Multi-Agent Architecture**: 4 specialized agents working collaboratively
-- **🔧 Auto-Repair Capabilities**: Self-correcting SQL generation with iterative refinement
-- **📚 RAG Integration**: Context-aware database understanding using ChromaDB
-- **🎯 High Accuracy**: Perfect accuracy (100%) on medium and hard complexity queries
-- **🌐 Modern Web Interface**: FastAPI backend with Streamlit frontend
-- **📊 Rich Visualizations**: Interactive charts and data exploration tools
+- ** Multi-Agent Architecture**: 4 specialized agents working collaboratively
+- ** Auto-Repair Capabilities**: Self-correcting SQL generation with iterative refinement
+- ** RAG Integration**: Context-aware database understanding using ChromaDB
+- ** High Accuracy**: Perfect accuracy (100%) on medium and hard complexity queries
+- ** Modern Web Interface**: FastAPI backend with Streamlit frontend
+- ** Rich Visualizations**: Interactive charts and data exploration tools
 
-## 🏗️ System Architecture
+##  System Architecture
+The CrewToSQL system implements a sophisticated multi-agent architecture that transforms natural language queries into accurate SQL statements through a coordinated workflow.
 
-The system consists of four specialized agents:
+![System Architecture](figures/WORKFLOW_FINAL_SCREEN.png)
+
+System Architecture and Workflow of the CrewToSQL: A RAG-Enhanced Multi-Agent Framework for Natural Language to SQL over relational Databases.
+This figure illustrates the overall architecture and workflow, depicting the journey from user question to SQL answer.
+
+
+![System Architecture](figures/RAG_screen.png)
+
+
+Two-Phase Retrieval-Augmented Generation Pipeline Used in CrewToSQL System
+This figure shows the detailed two-phase RAG pipeline that enables semantic retrieval and generation for SQL query creation.
+
+
+The system consists of four specialized agents in the Layer Agnets:
 
 1. **Question Refinement Agent** - Natural language understanding and query clarification
 2. **Analyzer Agent** - Retrieval-based schema understanding using RAG
@@ -35,8 +49,8 @@ The system consists of four specialized agents:
 - **Frontend**: Streamlit
 - **LLM**: Google Gemini
 - **Vector Store**: ChromaDB
-- **Database**: SQLite
-- **Framework**: CrewAI
+- **Database**: SQLite , MySQL
+- **Framework**: CrewAI, Langchain
 
 ## 📁 Project Structure
 
@@ -131,8 +145,23 @@ student-sql-crew/
 
 ## 💡 Usage
 
-### Web Interface Features
+The frontend is built with Streamlit, providing an intuitive interface for natural language database querying:
 
+![System Architecture](figures/main.png)
+
+![System Architecture](figures/999)
+
+![System Architecture](figures/3)
+
+
+![System Architecture](figures/1)
+
+![System Architecture](figures/2)
+
+
+
+
+### Web Interface Features
 - **Natural Language Query Input**: Type your questions in plain English
 - **Database Upload**: Upload your own database files
 - **Tabbed Navigation**: Organized interface for different functionalities
